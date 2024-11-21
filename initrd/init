@@ -1,0 +1,5 @@
+#!/bin/busybox sh
+mkdir /proc
+busybox mount -t proc none /proc
+mount -t devtmpfs none /dev
+sh
