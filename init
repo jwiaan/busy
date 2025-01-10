@@ -1,0 +1,12 @@
+#!/bin/bash
+
+mkdir -p /proc /dev
+mount -t proc proc /proc
+mount -t devtmpfs none /dev
+
+export PS1='\w \$ '
+
+while true
+do
+	bash
+done
