@@ -1,0 +1,7 @@
+#!/bin/bash
+#fdisk /dev/sdb
+#mkfs.fat /dev/sdb1
+mount /dev/sdb1 /mnt
+mkdir /mnt/EFI/BOOT -p
+touch /mnt/EFI/BOOT/BOOTX64.EFI
+efibootmgr -c -d /dev/sdb -p 1 -L usb -l /bzImage -u 'initrd=\initrd.cpio.gz'

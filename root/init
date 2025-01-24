@@ -1,7 +1,8 @@
 #!/bin/busybox sh
 
-mkdir /proc
+mkdir -p /proc /dev
 busybox mount -t proc proc /proc
+mount -t devtmpfs none /dev
 
 while true
 do
